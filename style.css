@@ -1,0 +1,296 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+	line-height: 1.8;
+}
+
+
+.banner {
+	background-color: #00FFFF;
+	border-bottom: 10px solid #9400D3;
+	padding: 2em;	
+
+}
+
+.banner h1 {
+	margin: 0;
+	text-align: center;
+}
+
+iframe {
+   border: 0;
+}
+
+h2 {
+	color: #333;
+	text-align: center;
+	font-weight: bold;
+}
+h3 {
+	color: #333;
+	text-align: center;
+}
+h4 {
+	color: #333;
+	text-align: center;
+}
+	
+
+.banner img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+main {
+	padding: 2em;
+	background-color: #D8BFD8;
+	text-align: left;
+}
+
+.content-wrapper{
+	background-color: #D8BFD8;
+}
+
+.wrap{
+	float: right;
+	margin: 10px;
+}
+
+.media-container{
+	
+}
+
+.sidebar {
+	padding: 2em;
+	color: #333;
+	background-color: #e066ff;
+}
+
+.site-footer {
+	min-height: 6em;
+	background-color: #00FFFF;
+	border-top: 10px solid #9400D3;
+	text-align: center;
+}
+.copyright {
+	text-align: center;
+	font-style: italic;
+}
+/* === Special Quote === */
+
+.pquote {
+    float: right;
+    width: 300px;
+    background: url(images/openquote.gif) top left no-repeat;
+    color: #9400D3;
+    font-size: 22px;
+    line-height: 0.9;
+    font-style: italic;
+    padding: 6px;
+}
+
+
+blockquote {
+    margin: 0;
+}
+
+.pquote p:first-letter {
+    font-size: 39px;
+    font-weight: bold;
+}
+/* === Form style=== */
+
+.form-default {
+	background-color: #FFE4C4;
+}
+
+.form-default legend {
+	font-style: italic;
+	font-weight: bold;
+}
+
+.form-default fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.form-default select {
+	padding: 0.5em;
+}
+
+.form-default input[type="submit"]:hover {
+	background-color: #e6e6e6;
+}
+
+/* === NAVIGATION MENU === */
+ 
+.primary-menu ul {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+.primary-menu li {
+	list-style-type: none;
+	padding: 0;
+}
+
+.primary-menu a {
+	text-decoration:none;
+	color:#333;
+	font-weight: bold;
+	background-color: ##E0FFFF;
+	border: 3px solid #9400D3;
+	border-radius: 6px;
+	display: block;
+	margin: 0.6em;
+	padding:0 0.6em;
+	text-align: center;
+}
+   
+.primary-menu a:hover {
+	background-color:#c660ff;
+}
+
+/*===video embed=== */
+.media-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+ 
+.media-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* === TABLE === */
+
+main table {
+	border: 3px solid #896565; 
+	border-collapse: collapse;
+ }
+ 
+main caption {
+	font-weight: bold;
+	color: #333;
+}
+  
+main th {
+	background: #EFBCBC;
+	padding: 5px 4px;
+	border-right: 2px solid #896565;
+	color:#333;
+}
+
+main tr:nth-child(even) {
+	background: #F3CBCB;
+}
+
+main tr:nth-child(odd) {
+	background: #EFCECE;
+}
+
+main td { 
+	color: #725353;
+	padding: 6px;
+	border-right: 2px solid #896565;
+	border-bottom: 2px solid #896565;
+}
+/* === LIST === */
+
+main ul ul li {
+font-style: italic;
+color: #4B0082;
+}
+
+main ul {
+	color: #4B0082;
+	list-style-type: round;
+	
+}
+/* flexible img elements */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/*this is what makes it work for smart phone screens*/
+
+@media (min-width: 768px) {
+
+	body {
+		font-size: 110%;
+	}
+	
+	.content-wrapper {
+		overflow: hidden;
+		max-width: 1400px;
+		margin: 0 auto;	
+	}
+
+	main {
+		float: left;
+		width: 55%;
+		
+	}
+	
+	.sidebar {
+		float: left;
+		width: 45%;
+	}
+	/*large displays */
+
+	.banner {
+		position: relative;
+	}	
+
+	.banner img {
+		position: absolute;
+		top: 6px;
+		right: 12px;
+	}
+	/* === Print Page Code=== */
+
+@media print {
+ 
+	* {
+		color: #000 !important;
+		background: none !important;
+	}
+	
+	:not(table):not(td):not(th) {
+        border: 0 !important;
+	}
+	
+	.content-wrapper {
+		display: block;
+	}
+
+	main, .sidebar {
+		padding: 0;
+	}
+ 
+	.banner, .primary-menu, .site-footer, .intrapage-links, a[href="#"] {
+		display: none;
+	}
+ 
+	body {
+		font-size: 10pt;
+	}
+   
+	
+} /* end print code*/
+} 
